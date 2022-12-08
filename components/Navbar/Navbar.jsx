@@ -1,17 +1,11 @@
 import React from 'react'
-import { 
-	Navbar as NextNavbar,
-	Link,
-	Text,
-} from '@nextui-org/react'
+import { Image } from 'next/image'
+import { useRouter } from 'next/router'
+import { Navbar as NextNavbar, Text, Link } from '@nextui-org/react'
 
-export const Navbar = () => {
-	const collapseItems = [
-    "Home",
-    "About",
-    "Projects",
-    "Specialties",
-  ];
+export const Navbar = ({ path }) => {
+
+	console.log(path)
 
 	return (
 		<NextNavbar isBordered variant='sticky'>
@@ -26,7 +20,37 @@ export const Navbar = () => {
 				<NextNavbar.Link href='/projects'>Projects</NextNavbar.Link>
 				<NextNavbar.Link href='/specialties'>Specialties</NextNavbar.Link>
 			</NextNavbar.Content>
-			<NextNavbar.Content>
+			<NextNavbar.Content activeColor='primary' hideIn="xs">
+				<NextNavbar.Item>
+					<a href='https://www.github.com/JasonK97' target='_blank'>
+						<img 
+							src='/static/github.png'
+							alt='GitHub Logo'
+							width='20px'
+							height='20px'
+						/>
+					</a>
+				</NextNavbar.Item>
+				<NextNavbar.Item>
+					<a href='https://www.linkedin.com/in/jasonbkent' target='_blank'>
+						<img 
+							src='/static/linkedin.png'
+							alt='LinkedIn Logo'
+							width='20px'
+							height='20px'
+						/>
+					</a>
+				</NextNavbar.Item>
+				<NextNavbar.Item>
+					<a href='https://www.twitter.com/JasonKent_' target='_blank'>
+						<img 
+							src='/static/twitter.png'
+							alt='Twitter Logo'
+							width='20px'
+							height='20px'
+						/>
+					</a>
+				</NextNavbar.Item>
 			</NextNavbar.Content>
 		</NextNavbar>
 	)

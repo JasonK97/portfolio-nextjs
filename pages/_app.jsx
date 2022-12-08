@@ -1,8 +1,9 @@
 import '../styles/globals.css'
 import { createTheme, NextUIProvider } from '@nextui-org/react'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
+import { useRouter } from 'next/router'
+import { Navbar, Footer } from '../components'
 
-// 2. Call `createTheme` and pass your custom values
 const lightTheme = createTheme({
   type: 'light',
   // theme: {
@@ -18,19 +19,23 @@ const darkTheme = createTheme({
 })
 
 function MyApp({ Component, pageProps }) {
+  const path = useRouter().asPath
+  
   return (
     <NextThemesProvider
-    defaultTheme="system"
-    attribute="class"
-    value={{
-      light: lightTheme.className,
-      dark: darkTheme.className
-    }}
-  >
-    <NextUIProvider>
-      <Component {...pageProps} />
-    </NextUIProvider>
-  </NextThemesProvider>
+      defaultTheme="system"
+      attribute="class"
+      value={{
+        light: lightTheme.className,
+        dark: darkTheme.className
+      }}
+    >
+      <NextUIProvider>
+        <Navbar path={path} />
+        <Component {...pageProps} />
+        <Footer />
+      </NextUIProvider>
+    </NextThemesProvider>
   )
 }
 
