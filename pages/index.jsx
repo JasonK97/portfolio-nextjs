@@ -1,38 +1,46 @@
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { Text } from '@nextui-org/react'
 
 import { SEO } from '../components'
+import {
+  Container,
+  Heading,
+  Main,
+  Description,
+  TextBodyContainer,
+} from '../styles/styles'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Container>
       <SEO 
         page='Home'
         description='Jason Kent, Software and Full Stack Developer website built in Next.js'
       />
 
-      <main className={styles.main}>
+      <Main>
         <Image 
           src='/../public/static/me-blackbg.png' 
           alt='Jason Kent Logo' 
           width={300}
           height={300}
+          priority
         />
 
-        <h1 className={styles.title}>
+        <Heading>
           I'm Jason Kent.
-        </h1>
+        </Heading>
 
-        <p className={styles.description}>
-          I am a Full Stack Developer and Software Engineer.
-        </p>
+        <Description>
+          &lt; &gt; I am a Full Stack Developer and Software Engineer. &lt; / &gt;
+        </Description>
 
-        <p>
+        <Text>
           During work hours I build and manage websites, but 
           in my free time I love hunting, soccer, playing games, 
           and hanging out with my family.
-        </p>
-      </main>
-    </div>
+        </Text>
+      </Main>
+    </Container>
   )
 }

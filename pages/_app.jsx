@@ -1,8 +1,9 @@
 import '../styles/globals.css'
+import { SSRProvider } from 'react-aria';
 import { createTheme, NextUIProvider } from '@nextui-org/react'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { useRouter } from 'next/router'
-import { Navbar, Footer } from '../components'
+import { Navbar, FooterContainer } from '../components'
 
 const lightTheme = createTheme({
   type: 'light',
@@ -22,20 +23,22 @@ function MyApp({ Component, pageProps }) {
   const path = useRouter().asPath
   
   return (
-    <NextThemesProvider
-      defaultTheme="system"
-      attribute="class"
-      value={{
-        light: lightTheme.className,
-        dark: darkTheme.className
-      }}
-    >
-      <NextUIProvider>
-        <Navbar path={path} />
-        <Component {...pageProps} />
-        <Footer />
-      </NextUIProvider>
-    </NextThemesProvider>
+    <SSRProvider>
+      <NextThemesProvider
+        defaultTheme="system"
+        attribute="class"
+        value={{
+          light: lightTheme.className,
+          dark: darkTheme.className
+        }}
+      >
+        <NextUIProvider>
+          <Navbar path={path} />
+          <Component {...pageProps} />
+          <FooterContainer />
+        </NextUIProvider>
+      </NextThemesProvider>
+    </SSRProvider>
   )
 }
 
