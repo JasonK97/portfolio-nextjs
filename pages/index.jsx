@@ -4,8 +4,6 @@ import styles from '../styles/Home.module.css'
 import { SEO } from '../components'
 
 export default function Home() {
-  const path = useRouter().asPath
-  
   return (
     <div className={styles.container}>
       <SEO 

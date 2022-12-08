@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css'
 import { SEO } from '../components'
 
 export default function About() {
-
   return (
     <div className={styles.container}>
       <SEO 
