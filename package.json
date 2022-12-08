@@ -1,7 +1,9 @@
 {
   "name": "portfolio",
+  "description": "Jason Kent's Portfoio of work in Software and Web Development",
   "version": "0.1.0",
   "private": true,
+  "author": "Jason Kent <jasonbkent@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,8 +11,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.10",
     "next": "13.0.6",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.6",
+    "styled-system": "^5.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JasonK97/portfolio-nextjs"
+  },
+  "bugs": {
+    "url": "https://github.com/JasonK97/portfolio-nextjs"
   }
 }
