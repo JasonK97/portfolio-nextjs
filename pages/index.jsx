@@ -20,7 +20,7 @@ export default function Home() {
 
       <Main>
         <Image 
-          src='/../public/static/me-blackbg.png' 
+          src='/static/me-blackbg.png' 
           alt='Jason Kent Logo' 
           width={300}
           height={300}
