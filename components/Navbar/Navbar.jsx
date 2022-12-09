@@ -18,6 +18,7 @@ export const Navbar = ({ path }) => {
 				<NextNavbar.Link href='/'>Home</NextNavbar.Link>
 				<NextNavbar.Link href='/about'>About</NextNavbar.Link>
 				<NextNavbar.Link href='/projects'>Projects</NextNavbar.Link>
+				<NextNavbar.Link href='/work'>Work</NextNavbar.Link>
 				<NextNavbar.Link href='/specialties'>Specialties</NextNavbar.Link>
 			</NextNavbar.Content>
 			<NextNavbar.Content hideIn="xs">
