@@ -1,6 +1,14 @@
 import React from 'react'
 import { FaReact } from 'react-icons/fa'
-import { SiNextdotjs, SiJavascript, SiCplusplus, SiPostgresql, SiPython, SiCsswizardry, SiAndroidstudio } from 'react-icons/si'
+import { 
+  SiNextdotjs,
+  SiJavascript,
+  SiCplusplus,
+  SiPostgresql,
+  SiPython,
+  SiCsswizardry,
+  SiAndroidstudio
+} from 'react-icons/si'
 import { IoLogoVue } from 'react-icons/io5'
 import { TiHtml5 } from 'react-icons/ti'
 import { SEO } from '../components'
