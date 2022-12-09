@@ -47,6 +47,12 @@ export const PictureInfoGrid = styled.div`
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  @media(max-width: 800px) {
+    margin: .25rem auto .25rem auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const TextBodyContainer = styled.div`
@@ -54,6 +60,11 @@ export const TextBodyContainer = styled.div`
   line-height: 1.5;
   font-size: 1.5rem;
   max-width: 700px;
+  @media(max-width: 800px) {
+    margin: .25rem auto .25rem auto;
+    display: grid;
+    justify-content: center;
+  }
 `;
 
 export const NavbarLink = styled(NextLink)`

@@ -1,16 +1,36 @@
 import React from 'react'
-import Link from 'next/link'
 import { Navbar as NextNavbar, Text, Link as NextLink } from '@nextui-org/react'
 
 export const Navbar = ({ path }) => {
 
-	// TODO: Figure out a way to indicate active page here dynamically.
-	// console.log(path)
+	const collapseItems = [
+		{
+			title: 'Home',
+			link: '/',
+		},
+		{
+			title: 'About',
+			link: '/about',
+		},
+		{
+			title: 'Projects',
+			link: '/projects',
+		},
+		{
+			title: 'Work Experience',
+			link: '/work',
+		},
+		{
+			title: 'Specialties',
+			link: '/specialties',
+		},
+	]
 
 	return (
 		<NextNavbar isBordered variant='sticky'>
+			<NextNavbar.Toggle showIn='xs' />
 			<NextNavbar.Brand>
-				<Text b color="inherit" hideIn="xs">
+				<Text b color="inherit">
 					JASON KENT
 				</Text>
 			</NextNavbar.Brand>
@@ -21,7 +41,7 @@ export const Navbar = ({ path }) => {
 				<NextNavbar.Link href='/work'>Work</NextNavbar.Link>
 				<NextNavbar.Link href='/specialties'>Specialties</NextNavbar.Link>
 			</NextNavbar.Content>
-			<NextNavbar.Content hideIn="xs">
+			<NextNavbar.Content>
 				<NextLink href='https://www.github.com/JasonK97' target='_blank'>
 					<img 
 						src='/static/github.png'
@@ -47,6 +67,21 @@ export const Navbar = ({ path }) => {
 					/>
 				</NextLink>
 			</NextNavbar.Content>
+			<NextNavbar.Collapse>
+				{collapseItems.map((item, index) => (
+					<NextNavbar.CollapseItem key={index}>
+						<NextLink
+							color="inherit"
+							css={{
+								minWidth: "100%",
+							}}
+							href={item.link}
+						>
+							{item.title}
+						</NextLink>
+					</NextNavbar.CollapseItem>
+				))}
+			</NextNavbar.Collapse>
 		</NextNavbar>
 	)
 }

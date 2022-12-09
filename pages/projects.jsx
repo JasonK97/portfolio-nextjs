@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import { MdConstruction } from 'react-icons/md'
 import { SEO } from '../components'
 import { Text, Link } from '@nextui-org/react'
+import useWindowDimensions from '../utils/useWindowDimensions'
 import {
   Main, 
   Heading, 
@@ -12,6 +12,8 @@ import {
 } from '../styles/styles'
 
 export default function Projects() {
+  const { width } = useWindowDimensions()
+
   return (
     <Container>
       <SEO 
@@ -28,6 +30,7 @@ export default function Projects() {
             alt='Mountain River Silver Labs Logo'
             height={200}
             width={200}
+            style={width < 800 ? { margin: '15px auto 15px auto' } : null}
           />
 
           <TextBodyContainer>
@@ -51,6 +54,15 @@ export default function Projects() {
         </PictureInfoGrid>
 
         <PictureInfoGrid>
+          {width < 800 && (
+            <Image 
+              src='/../public/static/bthd-logo.png'
+              alt='Bullet Heads Clan Logo'
+              height={200}
+              width={200}
+              style={{ margin: '15px auto 15px auto' }}
+            />
+          )}
           <TextBodyContainer>
             <Text>
               A friend of mine took me on to help build out a website in Vue.js 
@@ -70,12 +82,14 @@ export default function Projects() {
             </Link>
           </TextBodyContainer>
 
-          <Image 
-            src='/../public/static/bthd-logo.png'
-            alt='Bullet Heads Clan Logo'
-            height={200}
-            width={200}
-          />
+          {width > 800 && (
+            <Image 
+              src='/../public/static/bthd-logo.png'
+              alt='Bullet Heads Clan Logo'
+              height={200}
+              width={200}
+            />
+          )}
         </PictureInfoGrid>
 
         <PictureInfoGrid>
@@ -84,7 +98,7 @@ export default function Projects() {
             alt='Milk Toast Man Logo'
             height={200}
             width={200}
-            style={{ borderRadius: '50%' }}
+            style={width < 800 ? { borderRadius: '50%', margin: '15px auto 15px auto' } : { borderRadius: '50%' }}
           />
 
           <TextBodyContainer>
@@ -107,6 +121,16 @@ export default function Projects() {
         </PictureInfoGrid>
 
         <PictureInfoGrid>
+          {width < 800 && (
+            <Image 
+              src='/../public/static/nature-calls.png'
+              alt='Bullet Heads Clan Logo'
+              height={200}
+              width={200}
+              style={{ borderRadius: '15px', margin: '15px auto 15px auto' }}
+            />
+          )}
+
           <TextBodyContainer>
             <Text>
               Nature Calls is an Android Application built in Java using Android Studio.
@@ -125,13 +149,15 @@ export default function Projects() {
             </Link>
           </TextBodyContainer>
 
-          <Image 
-            src='/../public/static/nature-calls.png'
-            alt='Bullet Heads Clan Logo'
-            height={200}
-            width={200}
-            style={{ borderRadius: '15px' }}
-          />
+          {width > 800 && (
+            <Image 
+              src='/../public/static/nature-calls.png'
+              alt='Bullet Heads Clan Logo'
+              height={200}
+              width={200}
+              style={{ borderRadius: '15px' }}
+            />
+          )}
         </PictureInfoGrid>
       </Main>
     </Container>
