@@ -26,7 +26,7 @@ export default function Projects() {
 
         <PictureInfoGrid>
           <Image 
-            src='/../public/static/mtnriverlogo.png'
+            src='/static/mtnriverlogo.png'
             alt='Mountain River Silver Labs Logo'
             height={200}
             width={200}
@@ -56,7 +56,7 @@ export default function Projects() {
         <PictureInfoGrid>
           {width < 800 && (
             <Image 
-              src='/../public/static/bthd-logo.png'
+              src='/static/bthd-logo.png'
               alt='Bullet Heads Clan Logo'
               height={200}
               width={200}
@@ -84,7 +84,7 @@ export default function Projects() {
 
           {width > 800 && (
             <Image 
-              src='/../public/static/bthd-logo.png'
+              src='/static/bthd-logo.png'
               alt='Bullet Heads Clan Logo'
               height={200}
               width={200}
@@ -94,7 +94,7 @@ export default function Projects() {
 
         <PictureInfoGrid>
           <Image 
-            src='/../public/static/mtmmusic-logo.png'
+            src='/static/mtmmusic-logo.png'
             alt='Milk Toast Man Logo'
             height={200}
             width={200}
@@ -123,7 +123,7 @@ export default function Projects() {
         <PictureInfoGrid>
           {width < 800 && (
             <Image 
-              src='/../public/static/nature-calls.png'
+              src='/static/nature-calls.png'
               alt='Bullet Heads Clan Logo'
               height={200}
               width={200}
@@ -151,7 +151,7 @@ export default function Projects() {
 
           {width > 800 && (
             <Image 
-              src='/../public/static/nature-calls.png'
+              src='/static/nature-calls.png'
               alt='Bullet Heads Clan Logo'
               height={200}
               width={200}
