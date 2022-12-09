@@ -77,6 +77,15 @@ export const ListItem = styled.li`
   list-style-type: circle;
 `;
 
+export const CodeText = styled.code`
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+`;
+
 export const Footer = styled.footer`
   display: flex;
   flex: 1;
