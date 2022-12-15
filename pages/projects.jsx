@@ -2,6 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import { SEO } from '../components'
 import { Text, Link } from '@nextui-org/react'
+import { FaReact } from 'react-icons/fa'
+import { SiJava } from 'react-icons/si'
+import { IoLogoVue } from 'react-icons/io5'
 import useWindowDimensions from '../utils/useWindowDimensions'
 import {
   Main, 
@@ -48,7 +51,7 @@ export default function Projects() {
               target='_blank'
               isExternal
             >
-              mtnriversilvers.com
+              <FaReact size='50px' style={{ marginRight: '15px' }} /> mtnriversilvers.com
             </Link>
           </TextBodyContainer>
         </PictureInfoGrid>
@@ -78,7 +81,7 @@ export default function Projects() {
               target='_blank'
               isExternal
             >
-              bulletheads.org
+              <IoLogoVue size='50px' style={{ marginRight: '15px' }} /> bulletheads.org
             </Link>
           </TextBodyContainer>
 
@@ -115,7 +118,7 @@ export default function Projects() {
               target='_blank'
               isExternal
             >
-              Milk Toast Man repository
+              <IoLogoVue size='50px' style={{ marginRight: '15px' }} /> Milk Toast Man repository
             </Link>
           </TextBodyContainer>
         </PictureInfoGrid>
@@ -145,7 +148,7 @@ export default function Projects() {
               target='_blank'
               isExternal
             >
-              Nature Calls App repository
+              <SiJava size='50px' style={{ marginRight: '15px' }} /> Nature Calls App repository
             </Link>
           </TextBodyContainer>
 
