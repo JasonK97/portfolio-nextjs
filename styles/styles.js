@@ -67,10 +67,6 @@ export const TextBodyContainer = styled.div`
   }
 `;
 
-export const NavbarLink = styled(NextLink)`
-  color: #FFFFFF
-`;
-
 export const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
