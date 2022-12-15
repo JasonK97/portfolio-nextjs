@@ -34,7 +34,7 @@ export const Navbar = ({ path }) => {
 					JASON KENT
 				</Text>
 			</NextNavbar.Brand>
-			<NextNavbar.Content enableCursorHighlight hideIn="xs">
+			<NextNavbar.Content hideIn="xs">
 				<NextNavbar.Link href='/'>Home</NextNavbar.Link>
 				<NextNavbar.Link href='/about'>About</NextNavbar.Link>
 				<NextNavbar.Link href='/projects'>Projects</NextNavbar.Link>
