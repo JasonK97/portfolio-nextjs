@@ -35,11 +35,16 @@ export const Navbar = ({ path }) => {
 				</Text>
 			</NextNavbar.Brand>
 			<NextNavbar.Content hideIn="xs">
-				<NextNavbar.Link href='/'>Home</NextNavbar.Link>
+				{/* <NextNavbar.Link href='/'>Home</NextNavbar.Link>
 				<NextNavbar.Link href='/about'>About</NextNavbar.Link>
 				<NextNavbar.Link href='/projects'>Projects</NextNavbar.Link>
 				<NextNavbar.Link href='/work'>Work</NextNavbar.Link>
-				<NextNavbar.Link href='/specialties'>Specialties</NextNavbar.Link>
+				<NextNavbar.Link href='/specialties'>Specialties</NextNavbar.Link> */}
+				<NextLink href='/'>Home</NextLink>
+				<NextLink href='/about'>About</NextLink>
+				<NextLink href='/projects'>Projects</NextLink>
+				<NextLink href='/work'>Work</NextLink>
+				<NextLink href='/specialties'>Specialties</NextLink>
 			</NextNavbar.Content>
 			<NextNavbar.Content>
 				<NextLink href='https://www.github.com/JasonK97' target='_blank'>
