@@ -30,9 +30,11 @@ export const Navbar = ({ path }) => {
 		<NextNavbar isBordered variant='sticky'>
 			<NextNavbar.Toggle showIn='xs' />
 			<NextNavbar.Brand>
-				<Text b color="inherit">
-					JASON KENT
-				</Text>
+				<a href='/' style={{color: '#FFFFFF'}}>
+					<Text b color="inherit">
+						JASON KENT
+					</Text>
+				</a>
 			</NextNavbar.Brand>
 			<NextNavbar.Content hideIn="xs">
 				{/* <NextNavbar.Link href='/'>Home</NextNavbar.Link>
