@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar as NextNavbar, Text, Link as NextLink } from '@nextui-org/react'
 
-export const Navbar = ({ path }) => {
+export const Navbar = () => {
 
 	const collapseItems = [
 		{
@@ -24,15 +24,21 @@ export const Navbar = ({ path }) => {
 			title: 'Specialties',
 			link: '/specialties',
 		},
+		{
+			title: 'Blog',
+			link: '/blog',
+		},
 	]
 
 	return (
 		<NextNavbar isBordered variant='sticky'>
 			<NextNavbar.Toggle showIn='xs' />
 			<NextNavbar.Brand>
-				<Text b color="inherit">
-					JASON KENT
-				</Text>
+				<a href='/' style={{color: '#FFFFFF'}}>
+					<Text b color="inherit">
+						JASON KENT
+					</Text>
+				</a>
 			</NextNavbar.Brand>
 			<NextNavbar.Content hideIn="xs">
 				{/* <NextNavbar.Link href='/'>Home</NextNavbar.Link>
@@ -45,6 +51,7 @@ export const Navbar = ({ path }) => {
 				<NextLink href='/projects'>Projects</NextLink>
 				<NextLink href='/work'>Work</NextLink>
 				<NextLink href='/specialties'>Specialties</NextLink>
+				<NextLink href='/blog'>Blog</NextLink>
 			</NextNavbar.Content>
 			<NextNavbar.Content>
 				<NextLink href='https://www.github.com/JasonK97' target='_blank'>
