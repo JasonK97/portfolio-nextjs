@@ -32,7 +32,7 @@ export default function Home() {
         </Heading>
 
         <Description>
-          &lt; &gt; I am a Full Stack Developer and Software Engineer. &lt; / &gt;
+          <strong style={{color: '#3694FF'}}>&lt; &gt;</strong> I am a Full Stack Developer and Software Engineer. <strong style={{color: '#3694FF'}}>&lt; / &gt;</strong>
         </Description>
 
         <Text>
