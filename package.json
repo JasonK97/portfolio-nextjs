@@ -22,6 +22,7 @@
     "apollo-link-prismic": "^1.1.1",
     "date-fns": "^2.29.3",
     "graphql-tag": "^2.12.6",
+    "hover.css": "^2.3.2",
     "next": "13.0.6",
     "next-slicezone": "^0.2.6",
     "next-themes": "^0.2.1",

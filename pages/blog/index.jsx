@@ -6,10 +6,14 @@ import { createClient } from '@prismicio/client'
 
 import {
   BlogGrid,
+  BlogGridContainer,
   BlogGridImage,
+  BlogGridText,
   BlogMain,
+  Container,
   DateRange,
   Heading,
+  Main,
   WorkHeading,
 } from '../../styles/styles'
 import { RxCalendar } from 'react-icons/rx'
@@ -26,18 +30,26 @@ const Blog = ({ blogPosts }) => {
       />
 
       <BlogMain>
-        <Heading>Blog</Heading>
-        {blogPosts.map(post => (
-          <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
-            <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
-            <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
-            <DateRange>
-              <RxCalendar /> &nbsp;
-              Published: <Date dateString={post.data.publish_date} />
-            </DateRange>
-            <Text>{post.data.content?.[0]?.text.substring(0, 190)}...</Text>
-          </BlogGrid>
-        ))}
+        <Heading
+          m='auto'
+        >
+          Blog
+        </Heading>
+        {/* <BlogGridContainer> */}
+          {blogPosts.map(post => (
+            <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
+              <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
+              <BlogGridText>
+                <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
+                <DateRange>
+                  <RxCalendar /> &nbsp;
+                  Published: <Date dateString={post.data.publish_date} />
+                </DateRange>
+                <Text>{post.data.content?.[0]?.text.substring(0, 190)}...</Text>
+              </BlogGridText>
+            </BlogGrid>
+          ))}
+        {/* </BlogGridContainer> */}
       </BlogMain>
     </>
   )

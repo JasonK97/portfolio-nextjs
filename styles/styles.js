@@ -1,6 +1,13 @@
 import styled from 'styled-components'
-// import { Link as NextLink } from '@nextui-org/react'
 import Link from 'next/link'
+import { 
+  compose, 
+  color, 
+  border, 
+  space, 
+  typography, 
+  layout 
+} from 'styled-system'
 
 export const BlogBodyContainer = styled.div`
   margin: 1rem 4rem;
@@ -22,11 +29,41 @@ export const BlogGrid = styled.a`
   border-radius: 10px;
   margin: 2rem auto 2rem auto;
   max-width: 700px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+
+  &:hover {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+`
+
+export const BlogGridContainer = styled.div`
+  padding: 0 0 4rem 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 350px;
+  grid-template-rows: 80px;
+  column-gap: 10px;
+  row-gap: 15px;
+`
+
+export const BlogGridText = styled.div`
+  padding: 0 10px 10px 10px;
 `
 
 export const BlogGridImage = styled.img`
-border-top-left-radius: 5px;
-border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 `
 
 export const BlogImage = styled.img`
@@ -47,11 +84,12 @@ export const BlogImage = styled.img`
 export const BlogMain = styled.main`
   min-height: 100vh;
   padding: 0 0 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  grid-template-columns: 350px;
+  grid-template-rows: 80px;
+  column-gap: 10px;
+  row-gap: 15px;
 `;
 
 export const CodeText = styled.code`
@@ -88,6 +126,7 @@ export const Footer = styled.footer`
 `;
 
 export const Heading = styled.h1`
+  ${compose(space)}
   line-height: 1.15;
   font-size: 4rem;
 `;
