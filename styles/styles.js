@@ -15,6 +15,20 @@ export const BlogBodyContainer = styled.div`
   }
 `;
 
+export const BlogGrid = styled.a`
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  border-radius: 10px;
+  margin: 2rem auto 2rem auto;
+  max-width: 700px;
+`
+
+export const BlogGridImage = styled.img`
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+`
+
 export const BlogImage = styled.img`
   padding: 1rem 0;
   display: block;
