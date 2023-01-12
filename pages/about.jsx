@@ -16,7 +16,7 @@ export default function About() {
     <Container>
       <SEO 
         page='About'
-        description='Everthying about Jason Kent and Programming.'
+        description='Everything about Jason Kent and Programming.'
       />
 
       <Main>

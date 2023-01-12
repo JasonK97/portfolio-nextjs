@@ -1,19 +1,51 @@
-import { SliceZone } from '@prismicio/react'
 import * as prismicH from '@prismicio/helpers'
+import { SEO, Date } from '../../components'
+import { RichText } from 'prismic-reactjs'
+import sm from '../../sm.json'
 
-import { createClient } from '../prismicio'
-import { components } from '../slices'
+import { createClient } from '../../prismicio'
 
-const Page = ({ page, navigation, settings }) => {
-  return <SliceZone slices={page.data.slices} components={components} />
+import {
+  BlogBodyContainer,
+  BlogImage,
+  Heading, 
+  Main,
+  DateRange,
+} from '../../styles/styles'
+import { RxCalendar } from 'react-icons/rx'
+
+const BlogPost = ({ page }) => {
+  return (
+    <>
+      <SEO 
+        page={page.data.title?.[0]?.text}
+        description={page.data.title?.[0]?.text}
+      />
+
+      <BlogImage
+        src={page.data.image.url} 
+        alt={page.data.image.alt}
+      />
+      <Main>
+        <Heading>{page.data.title?.[0]?.text}</Heading>
+        <DateRange>
+          <RxCalendar /> &nbsp;
+          Published: <Date dateString={page.data.publish_date} />
+        </DateRange>
+        <BlogBodyContainer>
+          <RichText render={page.data.content} />
+        </BlogBodyContainer>
+      </Main>
+    </>
+  )
 }
 
-export default Page
+export default BlogPost
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData })
 
-  const page = await client.getByUID('page', params.uid)
+  const page = await client.getByUID('blogpost', params.uid)
 
   return {
     props: {
@@ -23,12 +55,12 @@ export async function getStaticProps({ params, previewData }) {
 }
 
 export async function getStaticPaths() {
-  const client = createClient()
+  const client = createClient(sm.apiEndpoint)
 
-  const pages = await client.getAllByType('page')
+  const blogPosts = await client.getAllByType('blogpost')
 
   return {
-    paths: pages.map((page) => prismicH.asLink(page)),
+    paths: blogPosts.map((post) => prismicH.asLink(post)),
     fallback: false,
   }
 }

@@ -5,6 +5,14 @@
   "status": true,
   "json": {
     "Main": {
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "title": {
         "type": "StructuredText",
         "config": {
@@ -12,6 +20,13 @@
           "placeholder": "",
           "allowTargetBlank": false,
           "single": "heading1"
+        }
+      },
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "slug",
+          "placeholder": ""
         }
       },
       "publish_date": {
