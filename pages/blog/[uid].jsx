@@ -1,38 +1,40 @@
-import { Image } from '@nextui-org/react'
 import * as prismicH from '@prismicio/helpers'
-import { Date } from '../../components/Date'
+import { SEO, Date } from '../../components'
 import { RichText } from 'prismic-reactjs'
 import sm from '../../sm.json'
 
 import { createClient } from '../../prismicio'
-import { components } from '../../slices'
 
-import { 
-  Container,
+import {
+  BlogBodyContainer,
+  BlogImage,
   Heading, 
   Main,
-  Description,
-  TextBodyContainer,
+  DateRange,
 } from '../../styles/styles'
+import { RxCalendar } from 'react-icons/rx'
 
 const Page = ({ page }) => {
-
-  console.log(page)
-
   return (
     <>
-      <Image
+      <SEO 
+        page={page.data.title?.[0]?.text}
+        description={page.data.title?.[0]?.text}
+      />
+
+      <BlogImage
         src={page.data.image.url} 
         alt={page.data.image.alt}
-        width={1200}
-        height={1000}
       />
       <Main>
         <Heading>{page.data.title?.[0]?.text}</Heading>
-        <Description>Published: <Date dateString={page.data.publish_date} /></Description>
-        <TextBodyContainer>
+        <DateRange>
+          <RxCalendar /> &nbsp;
+          Published: <Date dateString={page.data.publish_date} />
+        </DateRange>
+        <BlogBodyContainer>
           <RichText render={page.data.content} />
-        </TextBodyContainer>
+        </BlogBodyContainer>
       </Main>
     </>
   )
