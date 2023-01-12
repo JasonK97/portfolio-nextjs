@@ -14,7 +14,7 @@ import {
 } from '../../styles/styles'
 import { RxCalendar } from 'react-icons/rx'
 
-const Page = ({ page }) => {
+const BlogPost = ({ page }) => {
   return (
     <>
       <SEO 
@@ -40,7 +40,7 @@ const Page = ({ page }) => {
   )
 }
 
-export default Page
+export default BlogPost
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData })
