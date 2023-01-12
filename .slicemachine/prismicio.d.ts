@@ -9,6 +9,17 @@ type Simplify<T> = {
 /** Content for BlogPost documents */
 interface BlogpostDocumentData {
     /**
+     * Image field in *BlogPost*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blogpost.image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
      * Title field in *BlogPost*
      *
      * - **Field Type**: Title
@@ -51,7 +62,7 @@ interface BlogpostDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type BlogpostDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<BlogpostDocumentData>, "blogpost", Lang>;
+export type BlogpostDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<BlogpostDocumentData>, "blogpost", Lang>;
 export type AllDocumentTypes = BlogpostDocument;
 /**
  * Primary content in TextBlock → Primary

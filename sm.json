@@ -4,5 +4,6 @@
   "libraries": [
     "@/slices"
   ],
-  "_latest": "0.0.41"
+  "_latest": "0.3.0",
+  "framework": "previousNext"
 }
