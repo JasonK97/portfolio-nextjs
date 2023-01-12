@@ -44,6 +44,16 @@ export const BlogImage = styled.img`
   }
 `
 
+export const BlogMain = styled.main`
+  min-height: 100vh;
+  padding: 0 0 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const CodeText = styled.code`
   background: #fafafa;
   border-radius: 5px;
