@@ -23,18 +23,18 @@ const Blog = ({ blogPosts }) => {
   console.log(blogPosts)
 
   return (
-    <>
+    <Main>
       <SEO 
         page='Blog'
         description='My personal blog where I write about things I am learning and things that interest me about the Professional Programming world.'
       />
 
+      <Heading
+        mx='auto'
+      >
+        Blog
+      </Heading>
       <BlogMain>
-        <Heading
-          m='auto'
-        >
-          Blog
-        </Heading>
         {/* <BlogGridContainer> */}
           {blogPosts.map(post => (
             <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
@@ -51,7 +51,7 @@ const Blog = ({ blogPosts }) => {
           ))}
         {/* </BlogGridContainer> */}
       </BlogMain>
-    </>
+    </Main>
   )
 }
 
