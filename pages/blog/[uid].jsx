@@ -6,6 +6,7 @@ import sm from '../../sm.json'
 import { createClient } from '../../prismicio'
 
 import {
+  BlogBackButton,
   BlogBodyContainer,
   BlogImage,
   Heading, 
@@ -13,6 +14,8 @@ import {
   DateRange,
 } from '../../styles/styles'
 import { RxCalendar } from 'react-icons/rx'
+import { IoIosArrowBack } from 'react-icons/io'
+import { IoArrowBack } from 'react-icons/io5'
 
 const BlogPost = ({ page }) => {
   return (
@@ -34,7 +37,11 @@ const BlogPost = ({ page }) => {
         </DateRange>
         <BlogBodyContainer>
           <RichText render={page.data.content} />
+          <BlogBackButton href='/blog'>
+            <IoArrowBack />
+          </BlogBackButton>
         </BlogBodyContainer>
+
       </Main>
     </>
   )
