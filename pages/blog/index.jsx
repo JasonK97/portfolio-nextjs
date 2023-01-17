@@ -19,9 +19,7 @@ import {
 import { RxCalendar } from 'react-icons/rx'
 
 const Blog = ({ blogPosts }) => {
-
-  console.log(blogPosts)
-
+  
   return (
     <Main>
       <SEO 
