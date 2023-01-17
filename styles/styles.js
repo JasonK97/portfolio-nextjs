@@ -1,19 +1,27 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 import { 
-  compose, 
-  color, 
-  border, 
-  space, 
-  typography, 
-  layout 
+  compose,
+  space,
 } from 'styled-system'
+
+export const BlogBackButton = styled(Link)`
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 5px 10px 2px 10px;
+  margin: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  font-size: 1rem;
+  max-width: 40px;
+`
 
 export const BlogBodyContainer = styled.div`
   margin: 1rem 4rem;
   line-height: 1.5;
   font-size: 1.5rem;
   max-width: 800px;
+
   @media(max-width: 800px) {
     margin: .25rem auto .25rem auto;
     display: grid;
@@ -27,10 +35,10 @@ export const BlogGrid = styled.a`
   color: #FFFFFF;
   border: 3px solid #FFFFFF;
   border-radius: 10px;
-  margin: 2rem auto 2rem auto;
-  max-width: 700px;
+  margin: 2rem 1rem 2rem 1rem;
+  max-width: 400px;
+  max-height: 500px;
   display: inline-block;
-  vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -45,11 +53,17 @@ export const BlogGrid = styled.a`
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
+
+  @media(max-width: 800px) {
+    margin: 1rem auto 1rem auto;
+    min-width: 300px;
+    display: block;
+  }
 `
 
 export const BlogGridContainer = styled.div`
   padding: 0 0 4rem 0;
-  display: grid;
+  display: flex;
   justify-content: center;
   grid-template-columns: 350px;
   grid-template-rows: 80px;
@@ -84,12 +98,20 @@ export const BlogImage = styled.img`
 export const BlogMain = styled.main`
   min-height: 100vh;
   padding: 0 0 4rem 0;
-  display: grid;
+  display: flex;
   justify-content: center;
   grid-template-columns: 350px;
   grid-template-rows: 80px;
   column-gap: 10px;
   row-gap: 15px;
+
+  @media(max-width: 800px) {
+    margin: 1rem auto 1rem auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 `;
 
 export const CodeText = styled.code`
