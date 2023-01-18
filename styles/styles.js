@@ -54,7 +54,7 @@ export const BlogGrid = styled.a`
     transform: translateY(-8px);
   }
 
-  @media(max-width: 800px) {
+  @media(max-width: 1330px) {
     margin: 1rem auto 1rem auto;
     min-width: 300px;
     display: block;
@@ -105,7 +105,7 @@ export const BlogMain = styled.main`
   column-gap: 10px;
   row-gap: 15px;
 
-  @media(max-width: 800px) {
+  @media(max-width: 1330px) {
     margin: 1rem auto 1rem auto;
     width: 80%;
     margin-left: auto;
