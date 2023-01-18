@@ -8,14 +8,6 @@ First, run the development server:
 yarn dev
 ```
 
-## Slice Machine
-
-Run Slice Machine for editing prismic slices:
-
-```bash
-yarn slicemachine
-```
-
 Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
 ## Slice Machine
