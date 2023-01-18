@@ -5,9 +5,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-yarn install
-# then
 yarn dev
+```
+
+## Slice Machine
+
+Run Slice Machine for editing prismic slices:
+
+```bash
+yarn slicemachine
 ```
 
 Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
