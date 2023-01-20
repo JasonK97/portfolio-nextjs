@@ -14,7 +14,6 @@ import {
   DateRange,
 } from '../../styles/styles'
 import { RxCalendar } from 'react-icons/rx'
-import { IoIosArrowBack } from 'react-icons/io'
 import { IoArrowBack } from 'react-icons/io5'
 
 const BlogPost = ({ page }) => {
