@@ -8,7 +8,7 @@ import {
 export const BlogBackButton = styled(Link)`
   background-color: #FFFFFF;
   color: #000000;
-  padding: 5px 10px 2px 10px;
+  padding: 5px 10px 2px 0;
   margin: 10px;
   border: 1px solid #FFFFFF;
   border-radius: 5px;
