@@ -36,6 +36,21 @@
           "placeholder": ""
         }
       },
+      "tags": {
+        "type": "Group",
+        "config": {
+          "label": "Tags",
+          "fields": {
+            "tag": {
+              "type": "Text",
+              "config": {
+                "label": "tag",
+                "placeholder": "Enter tag..."
+              }
+            }
+          }
+        }
+      },
       "content": {
         "type": "StructuredText",
         "config": {

@@ -42,6 +42,17 @@ interface BlogpostDocumentData {
      */
     publish_date: prismicT.DateField;
     /**
+     * Tags field in *BlogPost*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blogpost.tags[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    tags: prismicT.GroupField<Simplify<BlogpostDocumentDataTagsItem>>;
+    /**
      * Content field in *BlogPost*
      *
      * - **Field Type**: Rich Text
@@ -52,6 +63,22 @@ interface BlogpostDocumentData {
      *
      */
     content: prismicT.RichTextField;
+}
+/**
+ * Item in BlogPost → Tags
+ *
+ */
+export interface BlogpostDocumentDataTagsItem {
+    /**
+     * tag field in *BlogPost → Tags*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: Enter tag...
+     * - **API ID Path**: blogpost.tags[].tag
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    tag: prismicT.KeyTextField;
 }
 /**
  * BlogPost document from Prismic
@@ -118,6 +145,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BlogpostDocumentData, BlogpostDocument, AllDocumentTypes, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { BlogpostDocumentData, BlogpostDocumentDataTagsItem, BlogpostDocument, AllDocumentTypes, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }
