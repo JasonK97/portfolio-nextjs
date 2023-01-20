@@ -32,7 +32,7 @@ export const Navbar = () => {
 	]
 
 	return (
-		<Layout>
+		// <Layout>
 			<NextNavbar isBordered variant='sticky'>
 				<NextNavbar.Toggle showIn='xs' />
 				<NextNavbar.Brand>
@@ -97,6 +97,6 @@ export const Navbar = () => {
 					))}
 				</NextNavbar.Collapse>
 			</NextNavbar>
-		</Layout>
+		// </Layout>
 	)
 }
