@@ -11,11 +11,9 @@ import { createClient } from '@prismicio/client'
 
 import {
   BlogGrid,
-  BlogGridContainer,
   BlogGridImage,
   BlogGridText,
   BlogMain,
-  Container,
   DateRange,
   Heading,
   Main,
@@ -26,18 +24,22 @@ import { RxCalendar } from 'react-icons/rx'
 const Blog = ({ blogPosts }) => {
   const [blogTags, setBlogTags] = useState([])
 
-  console.log(blogPosts)
+  let allTags = []
 
-  const allTags = [
-    {
-      value: 'Next.js',
-      label: 'Next.js'
-    },
-    {
-      value: 'Frameworks',
-      label: 'Frameworks'
-    },
-  ]
+  blogPosts.map(post => {
+    post.data.tags.map(tag => {
+      allTags.push({ value: tag.tag, label: tag.tag })
+    })
+  })
+
+  function removeDuplicates(allTags) {
+    const jsonObject = allTags.map(JSON.stringify);
+      
+    const uniqueSet = new Set(jsonObject);
+    const uniqueArray = Array.from(uniqueSet).map(JSON.parse);
+
+    return uniqueArray
+  }
 
   if (isEmpty(blogPosts)) {
     return <FadingBalls color='blue' />
@@ -59,7 +61,7 @@ const Blog = ({ blogPosts }) => {
       </Heading>
 
       <Select 
-        options={allTags}
+        options={removeDuplicates(allTags)}
         closeMenuOnSelect={false}
         isMulti
         styles={{
