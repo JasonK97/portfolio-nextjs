@@ -23,7 +23,7 @@ export default function About() {
         <Heading>About Me</Heading>
 
         <Description>
-          Currently I am the Lead Full Stack Developer and Marketing 
+          Currently, I am the Lead Full Stack Developer and Marketing 
           Team Manager at Leisure Time Inc. in Eastern Idaho.
         </Description>
 
