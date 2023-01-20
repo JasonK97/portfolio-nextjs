@@ -41,9 +41,7 @@ const Blog = ({ blogPosts }) => {
     return uniqueArray
   }
 
-  if (isEmpty(blogPosts)) {
-    return <FadingBalls color='blue' />
-  }
+  if (isEmpty(blogPosts)) return <FadingBalls color='blue' />
 
   return (
     <Main>
@@ -82,8 +80,29 @@ const Blog = ({ blogPosts }) => {
       />
 
       <BlogMain>
-        {/* <BlogGridContainer> */}
-        {isEmpty(blogTags) ? (
+        {!isEmpty(blogTags) && blogPosts ? (
+          blogPosts.map(post => {
+            post.data.tags.map(postTag => {
+              blogTags.map(tag => {
+                if (postTag.tag === tag.value) {
+                  return (
+                    <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
+                      <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
+                      <BlogGridText>
+                        <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
+                        <DateRange>
+                          <RxCalendar /> &nbsp;
+                          Published: <Date dateString={post.data.publish_date} />
+                        </DateRange>
+                        <Text>{post.data.content?.[0]?.text.substring(0, 190)}...</Text>
+                      </BlogGridText>
+                    </BlogGrid>
+                  )
+                }
+              })
+            })
+          })
+        ) : isEmpty(blogTags) && blogPosts ? (
           blogPosts.map(post => (
             <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
               <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
@@ -98,42 +117,8 @@ const Blog = ({ blogPosts }) => {
             </BlogGrid>
           ))
         ) : (
-          blogPosts.map(post => {
-            post.data.tags.map(postTag => {
-              blogTags.map(tag => {
-                (postTag.tag === tag.value) ? (
-                  // console.log(postTag.tag, tag.value)
-                  <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
-                    <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
-                    <BlogGridText>
-                      <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
-                      <DateRange>
-                        <RxCalendar /> &nbsp;
-                        Published: <Date dateString={post.data.publish_date} />
-                      </DateRange>
-                      <Text>{post.data.content?.[0]?.text.substring(0, 190)}...</Text>
-                    </BlogGridText>
-                  </BlogGrid>
-               ) : null;
-              })
-            })
-          })
-          // blogPosts.map(post => (
-          //   // post.data.find(p => p.tags === blogTags)
-          //   <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
-          //     <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
-          //     <BlogGridText>
-          //       <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
-          //       <DateRange>
-          //         <RxCalendar /> &nbsp;
-          //         Published: <Date dateString={post.data.publish_date} />
-          //       </DateRange>
-          //       <Text>{post.data.content?.[0]?.text.substring(0, 190)}...</Text>
-          //     </BlogGridText>
-          //   </BlogGrid>
-          // ))
+          null
         )}
-        {/* </BlogGridContainer> */}
       </BlogMain>
     </Main>
   )
