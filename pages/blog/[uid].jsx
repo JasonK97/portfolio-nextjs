@@ -40,7 +40,6 @@ const BlogPost = ({ page }) => {
             <IoArrowBack />
           </BlogBackButton>
         </BlogBodyContainer>
-
       </Main>
     </>
   )
