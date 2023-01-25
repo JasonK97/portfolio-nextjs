@@ -46,10 +46,10 @@ const Blog = ({ blogPosts }) => {
 
   const filteredBlogPosts = blogPosts.filter(post => {
     if (selectedTags.length === 0) {
-      return true;
+      return true
     }
-    return post.data.tags.some(tag => selectedTags.includes(tag.tag));
-  });
+    return post.data.tags.some(tag => selectedTags.includes(tag.tag))
+  })
 
   return (
     <Main>
