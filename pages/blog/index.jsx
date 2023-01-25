@@ -22,7 +22,8 @@ import {
 import { RxCalendar } from 'react-icons/rx'
 
 const Blog = ({ blogPosts }) => {
-  const [blogTags, setBlogTags] = useState([])
+  // const [blogTags, setBlogTags] = useState([])
+  const [selectedTags, setSelectedTags] = useState([])
 
   let allTags = []
 
@@ -33,15 +34,22 @@ const Blog = ({ blogPosts }) => {
   })
 
   function removeDuplicates(allTags) {
-    const jsonObject = allTags.map(JSON.stringify);
+    const jsonObject = allTags.map(JSON.stringify)
       
     const uniqueSet = new Set(jsonObject);
-    const uniqueArray = Array.from(uniqueSet).map(JSON.parse);
+    const uniqueArray = Array.from(uniqueSet).map(JSON.parse)
 
     return uniqueArray
   }
 
   if (isEmpty(blogPosts)) return <FadingBalls color='blue' />
+
+  const filteredBlogPosts = blogPosts.filter(post => {
+    if (selectedTags.length === 0) {
+      return true;
+    }
+    return post.data.tags.some(tag => selectedTags.includes(tag.tag));
+  });
 
   return (
     <Main>
@@ -76,11 +84,25 @@ const Blog = ({ blogPosts }) => {
             color: '#202020',
           }),
         }}
-        onChange={e => setBlogTags(e)}
+        // onChange={e => setBlogTags(e)}
+        onChange={e => setSelectedTags(e.map(tag => tag.value))}
       />
 
       <BlogMain>
-        {!isEmpty(blogTags) && blogPosts ? (
+        {filteredBlogPosts.map(post => (
+          <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
+            <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
+            <BlogGridText>
+              <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
+              <DateRange>
+                <RxCalendar /> &nbsp;
+                Published: <Date dateString={post.data.publish_date} />
+              </DateRange>
+              <Text>{post.data.content?.[0]?.text.substring(0, 190)}...</Text>
+            </BlogGridText>
+          </BlogGrid>
+        ))}
+        {/* {!isEmpty(blogTags) && blogPosts ? (
           blogPosts.map(post => {
             post.data.tags.map(postTag => {
               blogTags.map(tag => {
@@ -118,7 +140,7 @@ const Blog = ({ blogPosts }) => {
           ))
         ) : (
           null
-        )}
+        )} */}
       </BlogMain>
     </Main>
   )
