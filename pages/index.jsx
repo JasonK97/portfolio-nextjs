@@ -22,8 +22,8 @@ export default function Home() {
         <Image 
           src='/static/me-blackbg.png' 
           alt='Jason Kent Logo' 
-          width={300}
-          height={300}
+          width={344}
+          height={344}
           priority
         />
 
