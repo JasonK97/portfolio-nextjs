@@ -16,7 +16,7 @@ export const Navbar = () => {
 						</Text>
 					</a>
 				</NextNavbar.Brand>
-				<NextNavbar.Content hideIn="xs">
+				<NextNavbar.Content hideIn='xs'>
 					{collapseItems.map(item => (
 							<NextLink key={item.title} href={item.link}>{item.title}</NextLink>
 					))}
