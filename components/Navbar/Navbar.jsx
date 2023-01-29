@@ -8,7 +8,7 @@ export const Navbar = () => {
 	return (
 		// <Layout>
 			<NextNavbar isBordered variant='sticky'>
-				<NextNavbar.Toggle showIn='s' />
+				<NextNavbar.Toggle showIn='xs' />
 				<NextNavbar.Brand>
 					<a href='/' style={{color: '#FFFFFF'}}>
 						<Text b color="inherit">
@@ -16,7 +16,7 @@ export const Navbar = () => {
 						</Text>
 					</a>
 				</NextNavbar.Brand>
-				<NextNavbar.Content hideIn='s'>
+				<NextNavbar.Content hideIn='xs'>
 					{collapseItems.map(item => (
 							<NextLink key={item.title} href={item.link}>{item.title}</NextLink>
 					))}
