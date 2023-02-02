@@ -5,7 +5,7 @@ import { Text } from '@nextui-org/react'
 import Select, { StylesConfig } from 'react-select'
 import { FadingBalls } from 'react-cssfx-loading'
 
-import { SEO, Date } from '../../components'
+import { SEO, Date as FormattedDate } from '../../components'
 
 import { createClient } from '@prismicio/client'
 
@@ -43,12 +43,14 @@ const Blog = ({ blogPosts }) => {
 
   if (isEmpty(blogPosts)) return <FadingBalls color='blue' />
 
-  const filteredBlogPosts = blogPosts.filter(post => {
-    if (selectedTags.length === 0) {
-      return true
-    }
-    return post.data.tags.some(tag => selectedTags.includes(tag.tag))
-  })
+  const filteredBlogPosts = blogPosts
+    .filter(post => {
+      if (selectedTags.length === 0) {
+        return true
+      }
+      return post.data.tags.some(tag => selectedTags.includes(tag.tag))
+    })
+    .sort((a, b) => new Date(b.data.publish_date) - new Date(a.data.publish_date)) // This messes with the Date component, so it is imported as FormattedDate. TODO: change the name of the component.
 
   return (
     <Main>
@@ -94,7 +96,7 @@ const Blog = ({ blogPosts }) => {
               <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
               <DateRange>
                 <RxCalendar /> &nbsp;
-                Published: <Date dateString={post.data.publish_date} />
+                Published: <FormattedDate dateString={post.data.publish_date} />
               </DateRange>
               <Text>{post.data.content?.[0]?.text.substring(0, 190)}...</Text>
             </BlogGridText>
