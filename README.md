@@ -31,6 +31,7 @@ To learn more about technologies used in this project, take a look at the follow
 - [About NextUi](https://nextui.org) - NextUi npm package.
 - [Learn about Prismic](https://prismic.io/docs/nextjs) - Prismic CMS Documentation.
 - [Styled-Components](https://styled-components.com/docs) - Used for styling in this project.
+- [ChatGPT](https://chat.openai.com/chat) - Used for various bug fixes and blog posts ti increase productivity.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
