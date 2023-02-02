@@ -95,25 +95,6 @@ export const BlogImage = styled.img`
   }
 `
 
-// export const BlogMain = styled.main`
-//   min-height: 100vh;
-//   padding: 0 0 4rem 0;
-//   display: flex;
-//   justify-content: center;
-//   grid-template-columns: 350px 350px;
-//   grid-template-rows: 80px 80px;
-//   column-gap: 10px;
-//   row-gap: 15px;
-
-//   @media(max-width: 1330px) {
-//     margin: 1rem auto 1rem auto;
-//     width: 80%;
-//     margin-left: auto;
-//     margin-right: auto;
-//     display: block;
-//   }
-// `
-
 export const BlogMain = styled.main`
   min-height: 100vh;
   padding: 0 0 4rem 0;
@@ -132,7 +113,6 @@ export const BlogMain = styled.main`
     grid-template-columns: repeat(1, 1fr);
   }
 `
-
 
 export const CodeText = styled.code`
   background: #fafafa;
