@@ -25,7 +25,7 @@ export default function Work() {
 
         <WorkHeading>Lead Full Stack Developer - Leisure Time Inc.</WorkHeading>
 
-        <DateRange><MdDateRange /> Feb. 2022 - Present</DateRange>
+        <DateRange><MdDateRange /> Feb. 2022 - Feb. 2023</DateRange>
 
         <ListContainer>
           <ListItem>
