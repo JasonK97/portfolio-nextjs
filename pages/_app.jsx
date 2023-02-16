@@ -1,14 +1,14 @@
 import '../styles/globals.css'
 import { SSRProvider } from 'react-aria'
-import { createTheme, NextUIProvider } from '@nextui-org/react'
+import { createTheme, NextUIProvider, } from '@nextui-org/react'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { useRouter } from 'next/router'
-import { Navbar, FooterContainer } from '../components'
+import { Header, FooterContainer } from '../components'
 import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { repositoryName } from '../prismicio'
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react'
 
 const lightTheme = createTheme({
   type: 'light',
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         <NextUIProvider>
           <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
             <PrismicPreview repositoryName={repositoryName}>
-              <Navbar path={path} />
+              <Header path={path} />
               <Component {...pageProps} />
               <Analytics />
               <FooterContainer />
