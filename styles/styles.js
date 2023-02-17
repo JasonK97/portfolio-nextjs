@@ -57,6 +57,7 @@ export const BlogGrid = styled.a`
   @media(max-width: 1330px) {
     margin: 1rem auto 1rem auto;
     min-width: 300px;
+    min-height: 450px;
     display: block;
   }
 `
@@ -91,6 +92,11 @@ export const BlogGridImage = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  @media(max-width: 800px) {
+    width: 100%;
+    height: 150px;
+  }
 `
 
 export const BlogImage = styled.img`
@@ -107,6 +113,7 @@ export const BlogImage = styled.img`
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
   }
 `
 
