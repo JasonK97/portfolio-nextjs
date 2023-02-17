@@ -23,6 +23,14 @@ export default function Work() {
       <Main>
         <Heading>Work Experience</Heading>
 
+        <WorkHeading>Software Developer - Liberty Mutual Insurance</WorkHeading>
+
+        <DateRange><MdDateRange /> Feb. 2023 - Present</DateRange>
+
+        {/* <ListContainer>
+          <ListItem></ListItem>
+        </ListContainer> */}
+
         <WorkHeading>Lead Full Stack Developer - Leisure Time Inc.</WorkHeading>
 
         <DateRange><MdDateRange /> Feb. 2022 - Feb. 2023</DateRange>

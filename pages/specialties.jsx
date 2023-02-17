@@ -11,7 +11,7 @@ import {
 } from 'react-icons/si'
 import { IoLogoVue } from 'react-icons/io5'
 import { TiHtml5 } from 'react-icons/ti'
-import { SEO } from '../components'
+import { SEO, MotionReveal } from '../components'
 import { 
   Main,
   Heading,
@@ -31,26 +31,50 @@ export default function Specialties() {
       />
 
       <Main>
-        <Heading>Specialties</Heading>
+        <MotionReveal>
+          <Heading>Specialties</Heading>
+        </MotionReveal>
 
-        <WorkHeading>Current Tools</WorkHeading>
+        <MotionReveal>
+          <WorkHeading>Current Tools</WorkHeading>
+        </MotionReveal>
+
+        <MotionReveal>
+          <PictureInfoGrid>
+            <FaReact style={styles} />
+            <SiNextdotjs style={styles} />
+          </PictureInfoGrid>
+        </MotionReveal>
+
+        <MotionReveal>
+          <WorkHeading>Tools used in University</WorkHeading>
+        </MotionReveal>
 
         <PictureInfoGrid>
-          <FaReact style={styles} />
-          <SiNextdotjs style={styles} />
-        </PictureInfoGrid>
-
-        <WorkHeading>Tools used in University</WorkHeading>
-
-        <PictureInfoGrid>
-          <SiCplusplus style={styles} />
-          <IoLogoVue style={styles} />
-          <SiJavascript style={styles} />
-          <TiHtml5 style={styles} />
-          <SiCsswizardry style={styles} />
-          <SiPostgresql style={styles} />
-          <SiAndroidstudio style={styles} />
-          <SiPython style={styles} />
+          <MotionReveal>
+            <SiCplusplus style={styles} />
+          </MotionReveal>
+          <MotionReveal>
+            <IoLogoVue style={styles} />
+          </MotionReveal>
+          <MotionReveal>
+            <SiJavascript style={styles} />
+          </MotionReveal>
+          <MotionReveal>
+            <TiHtml5 style={styles} />
+          </MotionReveal>
+          <MotionReveal>
+            <SiCsswizardry style={styles} />
+          </MotionReveal>
+          <MotionReveal>
+            <SiPostgresql style={styles} />
+          </MotionReveal>
+          <MotionReveal>
+            <SiAndroidstudio style={styles} />
+          </MotionReveal>
+          <MotionReveal>
+            <SiPython style={styles} />
+          </MotionReveal>
         </PictureInfoGrid>
       </Main>
     </Container>

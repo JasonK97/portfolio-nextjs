@@ -5,7 +5,7 @@ import { Text } from '@nextui-org/react'
 import Select, { StylesConfig } from 'react-select'
 import { FadingBalls } from 'react-cssfx-loading'
 
-import { SEO, Date as FormattedDate } from '../../components'
+import { SEO, Date as FormattedDate, MotionReveal } from '../../components'
 
 import { createClient } from '@prismicio/client'
 
@@ -90,17 +90,19 @@ const Blog = ({ blogPosts }) => {
 
       <BlogMain>
         {filteredBlogPosts.map(post => (
-          <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
-            <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
-            <BlogGridText>
-              <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
-              <DateRange>
-                <RxCalendar /> &nbsp;
-                Published: <FormattedDate dateString={post.data.publish_date} />
-              </DateRange>
-              <Text>{post.data.content?.[0]?.text.substring(0, 190)}...</Text>
-            </BlogGridText>
-          </BlogGrid>
+          <MotionReveal>
+            <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
+              <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
+              <BlogGridText>
+                <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
+                <DateRange>
+                  <RxCalendar /> &nbsp;
+                  Published: <FormattedDate dateString={post.data.publish_date} />
+                </DateRange>
+                <Text>{post.data.content?.[0]?.text.substring(0, 190)}...</Text>
+              </BlogGridText>
+            </BlogGrid>
+          </MotionReveal>
         ))}
       </BlogMain>
     </Main>
