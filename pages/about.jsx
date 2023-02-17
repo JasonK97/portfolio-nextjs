@@ -9,6 +9,7 @@ import {
   Main,
   Description,
   TextBodyContainer,
+  StyledLink,
 } from '../styles/styles'
 
 export default function About() {
@@ -26,8 +27,7 @@ export default function About() {
 
         <MotionReveal>
           <Description>
-            Currently, I am the Lead Full Stack Developer and Marketing 
-            Team Manager at Leisure Time Inc. in Eastern Idaho.
+            Currently, I am a Software Developer at Liberty Mutual Insurance.
           </Description>
         </MotionReveal>
 
@@ -49,8 +49,19 @@ export default function About() {
               I entered College at Brigham Young University - Idaho and began 
               my major in Software Engineering. My program exposed me to C++ 
               and the basics of Software Development. After a couple semesters 
-              I was able to be exposed to Web Development. From there, the rest is 
-              history.
+              I was able to be exposed to Web Development. After an internship 
+              with a small company called&nbsp;
+              <StyledLink href='https://allucent.io/' target='_blank'>
+                allucent
+              </StyledLink>
+              &nbsp;where I was exposed to the Vue.js JavaScript Library, I continued 
+              work in the IT field looking for my entrance into the professional 
+              programming work field. That was when, in the tail-end of 2021, I found&nbsp;
+              <StyledLink href='https://leisuretimeinc.com/about-us/' target='_blank'>
+                Leisure Time Inc.
+              </StyledLink>
+              &nbsp;I spent around a year and half there doing Full Stack Development and 
+              manaing their Marketing Team before getting an offer at Liberty Mutual.
             </Text>
           </TextBodyContainer>
         </MotionReveal>
