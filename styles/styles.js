@@ -99,7 +99,7 @@ export const BlogImage = styled.img`
   margin-left: auto;
   margin-right: auto;
   width: 60%;
-  height: 60%;
+  height: 550px;
   
   @media(max-width: 800px) {
     margin: 0;
