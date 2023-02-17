@@ -92,7 +92,9 @@ const Blog = ({ blogPosts }) => {
         {filteredBlogPosts.map(post => (
           <MotionReveal>
             <BlogGrid key={post.id} href={`/blog/${post?.uid}`}>
-              <BlogGridImage src={post.data.image.url} alt={post.data.image.alt} />
+              <BlogGridImage>
+                <img src={post.data.image.url} alt={post.data.image.alt} />
+              </BlogGridImage>
               <BlogGridText>
                 <WorkHeading>{post.data.title?.[0]?.text}</WorkHeading>
                 <DateRange>
