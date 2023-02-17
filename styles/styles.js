@@ -36,6 +36,7 @@ export const BlogGrid = styled.a`
   border-radius: 10px;
   margin: 2rem 1rem 2rem 1rem;
   max-width: 400px;
+  min-height: 500px;
   max-height: 500px;
   display: inline-block;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -74,9 +75,22 @@ export const BlogGridText = styled.div`
   padding: 0 10px 10px 10px;
 `
 
-export const BlogGridImage = styled.img`
+export const BlogGridImage = styled.div`
+  position: relative;
+  width: 100%;
+  height: 225px;
+  overflow: hidden;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `
 
 export const BlogImage = styled.img`
@@ -85,6 +99,7 @@ export const BlogImage = styled.img`
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+  height: 60%;
   
   @media(max-width: 800px) {
     margin: 0;
@@ -181,6 +196,8 @@ export const PictureInfoGrid = styled.div`
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
+
   @media(max-width: 800px) {
     margin: .25rem auto .25rem auto;
     display: grid;
