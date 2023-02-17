@@ -181,6 +181,8 @@ export const PictureInfoGrid = styled.div`
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
+  
   @media(max-width: 800px) {
     margin: .25rem auto .25rem auto;
     display: grid;
