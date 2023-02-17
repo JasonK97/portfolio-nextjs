@@ -98,7 +98,7 @@ export const BlogImage = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 850px;
   height: 550px;
   
   @media(max-width: 800px) {
