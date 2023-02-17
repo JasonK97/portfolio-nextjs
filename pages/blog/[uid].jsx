@@ -1,5 +1,5 @@
 import * as prismicH from '@prismicio/helpers'
-import { SEO, Date } from '../../components'
+import { SEO, Date, MotionReveal } from '../../components'
 import { RichText } from 'prismic-reactjs'
 import sm from '../../sm.json'
 
@@ -24,22 +24,33 @@ const BlogPost = ({ page }) => {
         description={page.data.title?.[0]?.text}
       />
 
-      <BlogImage
-        src={page.data.image.url} 
-        alt={page.data.image.alt}
-      />
+      <MotionReveal>
+        <BlogImage
+          src={page.data.image.url} 
+          alt={page.data.image.alt}
+        />
+      </MotionReveal>
+
       <Main>
-        <Heading>{page.data.title?.[0]?.text}</Heading>
-        <DateRange>
-          <RxCalendar /> &nbsp;
-          Published: <Date dateString={page.data.publish_date} />
-        </DateRange>
-        <BlogBodyContainer>
-          <RichText render={page.data.content} />
-          <BlogBackButton href='/blog'>
-            <IoArrowBack />
-          </BlogBackButton>
-        </BlogBodyContainer>
+        <MotionReveal>
+          <Heading>{page.data.title?.[0]?.text}</Heading>
+        </MotionReveal>
+
+        <MotionReveal>
+          <DateRange>
+            <RxCalendar /> &nbsp;
+            Published: <Date dateString={page.data.publish_date} />
+          </DateRange>
+        </MotionReveal>
+
+        <MotionReveal>
+          <BlogBodyContainer>
+            <RichText render={page.data.content} />
+            <BlogBackButton href='/blog'>
+              <IoArrowBack />
+            </BlogBackButton>
+          </BlogBodyContainer>
+        </MotionReveal>
       </Main>
     </>
   )
