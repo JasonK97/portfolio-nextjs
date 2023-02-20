@@ -1,16 +1,16 @@
 import Image from 'next/image'
-import { Text } from '@nextui-org/react'
 
 import { SEO, MotionReveal } from '../components'
 import {
+  AnimatedText,
   Container,
-  Heading,
+  HomeHeading,
   Main,
-  Description,
-  TextBodyContainer,
+  StyledText,
 } from '../styles/styles'
 
 export default function Home() {
+
   return (
     <Container>
       <SEO 
@@ -20,8 +20,8 @@ export default function Home() {
 
       <Main>
         <MotionReveal>
-          <Image 
-            src='/static/me-blackbg.png' 
+          <Image
+            src='/static/me-no-bg.png' 
             alt='Jason Kent Logo' 
             width={344}
             height={344}
@@ -30,23 +30,32 @@ export default function Home() {
         </MotionReveal>
 
         <MotionReveal>
-          <Heading>
-            I'm Jason Kent.
-          </Heading>
+          <HomeHeading>
+            &nbsp;I am&nbsp;&nbsp;
+            <b>
+              <AnimatedText>
+                Jason Kent.<br />
+                a Software Engineer.<br />
+                a Full-Stack Developer.<br />
+                a husband.<br />
+                a father.
+              </AnimatedText>
+            </b>
+          </HomeHeading>
         </MotionReveal>
 
         <MotionReveal>
-          <Description>
-            <strong style={{color: '#3694FF'}}>&lt; &gt;</strong> I am a Full Stack Developer and Software Engineer. <strong style={{color: '#3694FF'}}>&lt; / &gt;</strong>
-          </Description>
-        </MotionReveal>
-
-        <MotionReveal>
-          <Text>
+          <StyledText>
+            <strong>
+              &lt; &gt;&nbsp;
+            </strong>
             During work hours I build and manage websites, but 
             in my free time I love hunting, soccer, playing games, 
             and hanging out with my family.
-          </Text>
+            <strong>
+              &nbsp;&lt; / &gt;
+            </strong>
+          </StyledText>
         </MotionReveal>
       </Main>
     </Container>
