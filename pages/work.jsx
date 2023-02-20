@@ -22,7 +22,7 @@ export default function Work() {
 
       <Main>
         <MotionReveal>
-          <Heading>Work Experience</Heading>
+          <Heading pt='4rem'>Work Experience</Heading>
         </MotionReveal>
 
         <MotionReveal>

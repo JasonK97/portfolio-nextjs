@@ -22,7 +22,7 @@ export default function About() {
 
       <Main>
         <MotionReveal>
-          <Heading>About Me</Heading>
+          <Heading pt='4rem'>About Me</Heading>
         </MotionReveal>
 
         <MotionReveal>

@@ -32,7 +32,7 @@ export default function Specialties() {
 
       <Main>
         <MotionReveal>
-          <Heading>Specialties</Heading>
+          <Heading pt='4rem'>Specialties</Heading>
         </MotionReveal>
 
         <MotionReveal>
