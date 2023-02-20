@@ -173,7 +173,7 @@ export const Footer = styled.footer`
 export const Heading = styled.h1`
   ${compose(space)}
   line-height: 1.15;
-  font-size: 2rem;
+  font-size: 3rem;
 `
 
 // The repeats are how the animation can pause briefly before continuing the rotation.
