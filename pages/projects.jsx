@@ -26,7 +26,7 @@ export default function Projects() {
 
       <Main>
         <MotionReveal>
-          <Heading>Projects</Heading>
+          <Heading pt='4rem'>Projects</Heading>
         </MotionReveal>
 
         <MotionReveal>
