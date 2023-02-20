@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Link from 'next/link'
+import { Text } from '@nextui-org/react'
 import { 
   compose,
   space,
@@ -172,7 +173,57 @@ export const Footer = styled.footer`
 export const Heading = styled.h1`
   ${compose(space)}
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
+`
+
+// The repeats are how the animation can pause briefly before continuing the rotation.
+export const rotation = keyframes`
+  0%   { top: 0px; }
+  7%   { top: 0px; }
+  20%  { top: -47.5px; }
+  25%  { top: -47.5px; }
+  40%  { top: -95.5px; }
+  45%  { top: -95.5px; }
+  60%  { top: -142.5px; }
+  65%  { top: -142.5px; }
+  80%  { top: -191.5px; }
+  85%  { top: -191.5px; }
+`
+
+
+export const AnimatedText = styled.div`
+  display: inline-block;
+  color: #3694FF;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+
+  animation: ${rotation} 10s infinite;
+  -webkit-animation: ${rotation} 10s infinite;
+  -moz-animation: ${rotation} 10s infinite;
+  -ms-animation: ${rotation} 10s infinite;
+  -o-animation: ${rotation} 10s infinite;
+
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  -o-animation-delay: 2s;
+`
+
+export const HomeHeading = styled.h1`
+  ${compose(space)}
+  font-size: 2rem;
+  float: left;
+
+  b {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 50px;
+  }
 `
 
 export const ListContainer = styled.ul`
@@ -216,6 +267,12 @@ export const PictureInfoGrid = styled.div`
 export const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
+  }
+`
+
+export const StyledText = styled(Text)`
+  strong {
+    color: #3694FF;
   }
 `
 
