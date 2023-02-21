@@ -180,14 +180,14 @@ export const Heading = styled.h1`
 export const rotation = keyframes`
   0%   { top: 0px; }
   7%   { top: 0px; }
-  20%  { top: -48.5px; }
-  25%  { top: -48.5px; }
-  40%  { top: -96.5px; }
-  45%  { top: -96.5px; }
-  60%  { top: -144.5px; }
-  65%  { top: -144.5px; }
-  80%  { top: -193px; }
-  85%  { top: -193px; }
+  20%  { top: -48px; }
+  25%  { top: -48px; }
+  40%  { top: -96px; }
+  45%  { top: -96px; }
+  60%  { top: -144px; }
+  65%  { top: -144px; }
+  80%  { top: -192.5px; }
+  85%  { top: -192.5px; }
 `
 
 export const AnimatedText = styled.div`
