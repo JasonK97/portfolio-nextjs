@@ -186,8 +186,8 @@ export const rotation = keyframes`
   45%  { top: -96.5px; }
   60%  { top: -144.5px; }
   65%  { top: -144.5px; }
-  80%  { top: -192px; }
-  85%  { top: -192px; }
+  80%  { top: -193px; }
+  85%  { top: -193px; }
 `
 
 export const AnimatedText = styled.div`
