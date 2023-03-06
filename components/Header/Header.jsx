@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Text } from '@nextui-org/react'
+import { Navbar, Text, Link as NextUILink } from '@nextui-org/react'
 import Link from 'next/link'
 import { collapseItems, socialLinks } from './data'
 
@@ -29,7 +29,7 @@ export const Header = () => {
 			<Navbar.Collapse>
 				{collapseItems.map((item, index) => (
 					<Navbar.CollapseItem key={index}>
-						<Link
+						<NextUILink
 							color="inherit"
 							css={{
 								minWidth: "100%",
@@ -37,7 +37,7 @@ export const Header = () => {
 							href={item.link}
 						>
 							{item.title}
-						</Link>
+						</NextUILink>
 					</Navbar.CollapseItem>
 				))}
 			</Navbar.Collapse>
