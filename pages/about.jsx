@@ -27,7 +27,7 @@ export default function About() {
 
         <MotionReveal>
           <Description>
-            Currently, I am a Software Developer at Liberty Mutual Insurance.
+            Currently, I am a Software Engineer for Liberty Mutual Insurance.
           </Description>
         </MotionReveal>
 
