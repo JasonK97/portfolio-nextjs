@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { SEO, MotionReveal } from '../components'
 import { Text, Link } from '@nextui-org/react'
 import { FaReact } from 'react-icons/fa'
-import { SiJava } from 'react-icons/si'
+import { SiJava, SiNextdotjs } from 'react-icons/si'
 import { IoLogoVue } from 'react-icons/io5'
 import useWindowDimensions from '../utils/useWindowDimensions'
 import {
@@ -12,6 +12,7 @@ import {
   Container,
   PictureInfoGrid,
   TextBodyContainer,
+  StyledLink,
 } from '../styles/styles'
 
 export default function Projects() {
@@ -27,6 +28,67 @@ export default function Projects() {
       <Main>
         <MotionReveal>
           <Heading pt='4rem'>Projects</Heading>
+        </MotionReveal>
+
+        <MotionReveal>
+          <PictureInfoGrid>
+            {width < 800 && (
+              <Image 
+                src='/static/MHP_logo.png'
+                alt='My Hunting Pal Logo'
+                height={200}
+                width={200}
+                style={{ margin: '15px auto 15px auto' }}
+              />
+            )}
+            <TextBodyContainer>
+              <Text>
+                Map out areas of public land to hunt, drop pins where 
+                you make your best stands, and easily navigate to them 
+                wherever you are. My Hunting Pal is built in Next.js 
+                and uses passwordless&nbsp;
+                <StyledLink 
+                  href='https://next-auth.js.org/'
+                  target='_blank'
+                >
+                  Next-Auth
+                </StyledLink>
+                ,&nbsp;
+                <StyledLink 
+                  href='https://www.mapbox.com/'
+                  target='_blank'
+                >
+                  Mapbox
+                </StyledLink>
+                , and&nbsp;
+                <StyledLink 
+                  href='https://styled-components.com/'
+                  target='_blank'
+                >
+                  Styled-Components
+                </StyledLink>
+                . [In-Progress]
+              </Text>
+
+              <Link 
+                href='https://my-hunting-pal.vercel.app/'
+                underline 
+                target='_blank'
+                isExternal
+              >
+                <SiNextdotjs size='50px' style={{ marginRight: '15px' }} /> myhuntingpal.com
+              </Link>
+            </TextBodyContainer>
+
+            {width > 800 && (
+              <Image 
+                src='/static/MHP_logo.png'
+                alt='My Hunting Pal Logo'
+                height={200}
+                width={200}
+              />
+            )}
+          </PictureInfoGrid>
         </MotionReveal>
 
         <MotionReveal>
