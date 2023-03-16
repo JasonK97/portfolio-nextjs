@@ -128,13 +128,20 @@ export const BlogMain = styled.main`
   column-gap: 10px;
   row-gap: 15px;
 
-  @media(max-width: 1330px) {
+  @media(max-width: 1024px) {
     margin: 1rem auto 1rem auto;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     grid-template-columns: repeat(1, 1fr);
   }
+  
+  @media(max-width: 1330px) {
+    margin: 1rem auto 1rem auto;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr);
 `
 
 export const CodeText = styled.code`
