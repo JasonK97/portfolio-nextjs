@@ -136,13 +136,13 @@ export const BlogMain = styled.main`
     grid-template-columns: repeat(1, 1fr);
   }
   
-  @media(max-width: 1330px) {
-    margin: 1rem auto 1rem auto;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr);
-  }
+  // @media(max-width: 1330px) {
+    // margin: 1rem auto 1rem auto;
+    // width: 80%;
+    // margin-right: auto;
+    // margin-left: auto;
+    // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr);
+  // }
 `
 
 export const CodeText = styled.code`
