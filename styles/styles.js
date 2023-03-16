@@ -28,7 +28,7 @@ export const BlogBodyContainer = styled.div`
     justify-content: center;
     width: 300px;
   }
-`;
+`
 
 export const BlogGrid = styled.a`
   text-decoration: none;
@@ -142,6 +142,7 @@ export const BlogMain = styled.main`
     margin-right: auto;
     margin-left: auto;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr);
+  }
 `
 
 export const CodeText = styled.code`
