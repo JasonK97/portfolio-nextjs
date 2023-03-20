@@ -36,7 +36,7 @@ export default function Work() {
         <MotionReveal>
           <ListContainer>
             <ListItem>
-              Performed Frontend Maintanence and added features to the Modeling Data File Share system to improve User Experience.
+              Performed Frontend Maintanence and added features using React.js to the Modeling Data File Share system to improve User Experience.
             </ListItem>
             <ListItem>
               Involved with SQL Server Management for the MDFS and Disaster Prediction Software in the Global Finance Technology Department.
