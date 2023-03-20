@@ -33,11 +33,19 @@ export default function Work() {
           <DateRange><MdDateRange /> Feb. 2023 - Present</DateRange>
         </MotionReveal>
 
-        {/* <MotionReveal>
+        <MotionReveal>
           <ListContainer>
-            <ListItem></ListItem>
+            <ListItem>
+              Performed Frontend Maintanence and added features to the Modeling Data File Share system to improve User Experience.
+            </ListItem>
+            <ListItem>
+              Involved with SQL Server Management for the MDFS and Disaster Prediction Software in the Global Finance Technology Department.
+            </ListItem>
+            <ListItem>
+              Set up, maintained, and deallocated Virtual Machines with Cortex.
+            </ListItem>
           </ListContainer>
-        </MotionReveal> */}
+        </MotionReveal>
 
         <MotionReveal>
           <WorkHeading>Lead Full Stack Developer - Leisure Time Inc.</WorkHeading>
