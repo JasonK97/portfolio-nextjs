@@ -26,7 +26,7 @@ export default function Work() {
         </MotionReveal>
 
         <MotionReveal>
-          <WorkHeading>Software Developer - Liberty Mutual Insurance</WorkHeading>
+          <WorkHeading>Software Engineer - Liberty Mutual Insurance</WorkHeading>
         </MotionReveal>
 
         <MotionReveal>
