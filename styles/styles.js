@@ -28,7 +28,7 @@ export const BlogBodyContainer = styled.div`
     justify-content: center;
     width: 300px;
   }
-`;
+`
 
 export const BlogGrid = styled.a`
   text-decoration: none;
@@ -55,7 +55,7 @@ export const BlogGrid = styled.a`
     transform: translateY(-8px);
   }
 
-  @media(max-width: 1330px) {
+  @media(max-width: 1024px) {
     margin: 1rem auto 1rem auto;
     min-width: 300px;
     min-height: 450px;
@@ -128,7 +128,7 @@ export const BlogMain = styled.main`
   column-gap: 10px;
   row-gap: 15px;
 
-  @media(max-width: 1330px) {
+  @media(max-width: 1024px) {
     margin: 1rem auto 1rem auto;
     width: 80%;
     margin-left: auto;
