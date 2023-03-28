@@ -38,4 +38,4 @@ To learn more about technologies used in this project, take a look at the follow
 
 This site is hosted by the [Vercel Platform](https://vercel.com/docs) from the creators of Next.js. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
