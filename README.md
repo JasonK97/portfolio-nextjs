@@ -34,8 +34,6 @@ To learn more about technologies used in this project, take a look at the follow
 - [Framer Motion](https://framer.com/motion) - Used for most animations on the site.
 - [ChatGPT](https://chat.openai.com/chat) - Used for various bug fixes and blog posts to increase productivity.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
 ## Deploy on Vercel
 
 This site is hosted by the [Vercel Platform](https://vercel.com/docs) from the creators of Next.js. 
