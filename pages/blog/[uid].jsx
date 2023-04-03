@@ -22,6 +22,8 @@ const BlogPost = ({ page }) => {
       <SEO 
         page={page.data.title?.[0]?.text}
         description={page.data.title?.[0]?.text}
+        image={page.data.image.url} 
+        alt={page.data.image.alt}
       />
 
       <MotionReveal>
