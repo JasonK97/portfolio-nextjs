@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Text, Link as NextUILink } from '@nextui-org/react'
+import { Navbar, Text, Link as NextUILink, Dropdown } from '@nextui-org/react'
 import Link from 'next/link'
 import { collapseItems, socialLinks } from './data'
 
@@ -14,10 +14,15 @@ export const Header = () => {
 					</Text>
 				</a>
 			</Navbar.Brand>
-			<Navbar.Content hideIn='xs'>
+			{/* <Navbar.Content hideIn='xs'>
 				{collapseItems.map(item => (
 						<Link key={item.title} href={item.link}>{item.title}</Link>
 				))}
+			</Navbar.Content> */}
+			<Navbar.Content hideIn='xs'>
+				<NextUILink href='/' css={{ color: '#3694FF' }}>Home</NextUILink>
+				<HeaderDropdown />
+				<NextUILink href='/blog' css={{ color: '#3694FF' }}>Blog</NextUILink>
 			</Navbar.Content>
 			<Navbar.Content>
 				{socialLinks.map(({ link, image, alt }) => (
@@ -42,5 +47,59 @@ export const Header = () => {
 				))}
 			</Navbar.Collapse>
 		</Navbar>
+	)
+}
+
+const HeaderDropdown = () => {
+	return (
+		<Dropdown isBordered>
+			<Navbar.Item>
+				<Dropdown.Button
+					auto
+					light
+					css={{
+						px: 0,
+						dflex: "center",
+						svg: { pe: "none" },
+						color: '#3694FF',
+						hover: {
+							color: '#225a99',
+						},
+					}}
+					ripple={false}
+				>
+					About
+				</Dropdown.Button>
+			</Navbar.Item>
+			<Dropdown.Menu
+				aria-label="About Me Pages"
+				variant='light'
+				css={{
+					$$dropdownMenuWidth: "150px",
+					$$dropdownItemHeight: "40px",
+					"& .nextui-dropdown-item": {
+						py: "$4",
+						// dropdown item title
+						"& .nextui-dropdown-item-content": {
+							w: "100%",
+							fontWeight: "$semibold",
+						},
+					},
+				}}
+			>
+				<Dropdown.Item>
+					<NextUILink href='/about' css={{ color: '#3694FF' }}>About Me</NextUILink>
+				</Dropdown.Item>
+				<Dropdown.Item>
+					<NextUILink href='/projects' css={{ color: '#3694FF' }}>Projects</NextUILink>
+				</Dropdown.Item>
+				<Dropdown.Item>
+					<NextUILink href='/work' css={{ color: '#3694FF' }}>Work Experience</NextUILink>
+				</Dropdown.Item>
+				<Dropdown.Item>
+					<NextUILink href='/specialties' css={{ color: '#3694FF' }}>Specialties</NextUILink>
+				</Dropdown.Item>
+			</Dropdown.Menu>
+		</Dropdown>
 	)
 }
