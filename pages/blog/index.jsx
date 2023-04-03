@@ -68,6 +68,7 @@ const Blog = ({ blogPosts }) => {
       </Heading>
 
       <Select 
+        placeholder={`Filter by Topic...`}
         options={removeDuplicates(allTags)}
         closeMenuOnSelect={false}
         isMulti
