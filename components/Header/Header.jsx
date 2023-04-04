@@ -8,11 +8,11 @@ export const Header = () => {
 		<Navbar isBordered maxWidth='fluid' variant='sticky'>
 			<Navbar.Toggle showIn='xs' />
 			<Navbar.Brand>
-				<a href='/' style={{color: '#FFFFFF'}}>
+				<Link href='/' style={{ color: '#FFFFFF' }}>
 					<Text b color="inherit">
 						JASON KENT
 					</Text>
-				</a>
+				</Link>
 			</Navbar.Brand>
 			{/* <Navbar.Content hideIn='xs'>
 				{collapseItems.map(item => (
