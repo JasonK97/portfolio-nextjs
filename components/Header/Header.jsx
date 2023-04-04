@@ -85,16 +85,48 @@ const HeaderDropdown = () => {
 				}}
 			>
 				<Dropdown.Item>
-					<Link href='/about' styles={{ color: '#3694FF', minWidth: '100%' }}>About Me</Link>
+					<Link 
+						href='/about' 
+						style={{ 
+						       color: '#3694FF', 
+						       minWidth: '100%', 
+						 }}
+					>
+						About Me
+					</Link>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<Link href='/projects' styles={{ color: '#3694FF', minWidth: '100%' }}>Projects</Link>
+					<Link 
+						href='/projects' 
+						style={{ 
+						       color: '#3694FF', 
+						       minWidth: '100%', 
+						 }}
+					>
+						Projects
+					</Link>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<Link href='/work' styles={{ color: '#3694FF', minWidth: '100%' }}>Work Experience</Link>
+					<Link 
+						href='/work' 
+						style={{ 
+						       color: '#3694FF', 
+						       minWidth: '100%', 
+						 }}
+					>
+						Work Experience
+					</Link>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<Link href='/specialties' styles={{ color: '#3694FF', minWidth: '100%' }}>Specialties</Link>
+					<Link 
+						href='/specialties' 
+						style={{ 
+						       color: '#3694FF', 
+						       minWidth: '100%',
+						 }}
+					>
+						Tools and Languages
+					</Link>
 				</Dropdown.Item>
 			</Dropdown.Menu>
 		</Dropdown>
