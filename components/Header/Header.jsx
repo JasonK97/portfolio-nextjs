@@ -20,9 +20,9 @@ export const Header = () => {
 				))}
 			</Navbar.Content> */}
 			<Navbar.Content hideIn='xs'>
-				<NextUILink href='/' css={{ color: '#3694FF' }}>Home</NextUILink>
+				<Link href='/' /*css={{ color: '#3694FF' }}*/>Home</NextUILink>
 				<HeaderDropdown />
-				<NextUILink href='/blog' css={{ color: '#3694FF' }}>Blog</NextUILink>
+				<Link href='/blog' /*css={{ color: '#3694FF' }}*/>Blog</NextUILink>
 			</Navbar.Content>
 			<Navbar.Content>
 				{socialLinks.map(({ link, image, alt }) => (
@@ -85,16 +85,16 @@ const HeaderDropdown = () => {
 				}}
 			>
 				<Dropdown.Item>
-					<NextUILink href='/about' css={{ color: '#3694FF', minWidth: '100%' }}>About Me</NextUILink>
+					<Link href='/about' style={{ color: '#3694FF', minWidth: '100%' }}>About Me</Link>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<NextUILink href='/projects' css={{ color: '#3694FF', minWidth: '100%' }}>Projects</NextUILink>
+					<Link href='/projects' style={{ color: '#3694FF', minWidth: '100%' }}>Projects</Link>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<NextUILink href='/work' css={{ color: '#3694FF', minWidth: '100%' }}>Work Experience</NextUILink>
+					<Link href='/work' style={{ color: '#3694FF', minWidth: '100%' }}>Work Experience</Link>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<NextUILink href='/specialties' css={{ color: '#3694FF', minWidth: '100%' }}>Specialties</NextUILink>
+					<Link href='/specialties' style={{ color: '#3694FF', minWidth: '100%' }}>Specialties</Link>
 				</Dropdown.Item>
 			</Dropdown.Menu>
 		</Dropdown>
