@@ -8,11 +8,11 @@ export const Header = () => {
 		<Navbar isBordered maxWidth='fluid' variant='sticky'>
 			<Navbar.Toggle showIn='xs' />
 			<Navbar.Brand>
-				<a href='/' style={{color: '#FFFFFF'}}>
+				<Link href='/' style={{ color: '#FFFFFF' }}>
 					<Text b color="inherit">
 						JASON KENT
 					</Text>
-				</a>
+				</Link>
 			</Navbar.Brand>
 			{/* <Navbar.Content hideIn='xs'>
 				{collapseItems.map(item => (
@@ -20,9 +20,9 @@ export const Header = () => {
 				))}
 			</Navbar.Content> */}
 			<Navbar.Content hideIn='xs'>
-				<NextUILink href='/' css={{ color: '#3694FF' }}>Home</NextUILink>
+				<Link href='/' /*css={{ color: '#3694FF' }}*/>Home</Link>
 				<HeaderDropdown />
-				<NextUILink href='/blog' css={{ color: '#3694FF' }}>Blog</NextUILink>
+				<Link href='/blog' /*css={{ color: '#3694FF' }}*/>Blog</Link>
 			</Navbar.Content>
 			<Navbar.Content>
 				{socialLinks.map(({ link, image, alt }) => (
@@ -85,16 +85,56 @@ const HeaderDropdown = () => {
 				}}
 			>
 				<Dropdown.Item>
-					<NextUILink href='/about' css={{ color: '#3694FF', minWidth: '100%' }}>About Me</NextUILink>
+					<Link 
+						href='/about' 
+						style={{ 
+							color: '#3694FF', 
+							paddingRight: '65%',
+							paddingTop: '1vh',
+							paddingBottom: '1vh',
+						}}
+					>
+						About Me
+					</Link>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<NextUILink href='/projects' css={{ color: '#3694FF', minWidth: '100%' }}>Projects</NextUILink>
+					<Link 
+						href='/projects' 
+						style={{ 
+							color: '#3694FF', 
+							paddingRight: '70%',
+							paddingTop: '1vh',
+							paddingBottom: '1vh',
+						}}
+					>
+						Projects
+					</Link>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<NextUILink href='/work' css={{ color: '#3694FF', minWidth: '100%' }}>Work Experience</NextUILink>
+					<Link 
+						href='/work' 
+						style={{ 
+							color: '#3694FF', 
+							paddingRight: '39%',
+							paddingTop: '1vh',
+							paddingBottom: '1vh',
+						}}
+					>
+						Work Experience
+					</Link>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<NextUILink href='/specialties' css={{ color: '#3694FF', minWidth: '100%' }}>Specialties</NextUILink>
+					<Link 
+						href='/specialties' 
+						style={{ 
+							color: '#3694FF', 
+							paddingRight: '23.5%',
+							paddingTop: '1vh',
+							paddingBottom: '1vh',
+						}}
+					>
+						Tools and Languages
+					</Link>
 				</Dropdown.Item>
 			</Dropdown.Menu>
 		</Dropdown>

@@ -36,8 +36,19 @@ export default function About() {
             <Text>
               Growing up in the Pacific Northwest exposed me to a lot 
               of what technology has to offer. Having a father in Mechanical 
-              Engineering at Boeing and an uncle doing the same at Microsoft 
-              and now Meta, I knew early on that I wanted to something in 
+              Engineering at&nbsp;
+              <StyledLink href='https://www.boeing.com/' target='_blank'>
+                Boeing
+              </StyledLink>
+              &nbsp;and an uncle doing the same at&nbsp;
+              <StyledLink href='https://www.microsoft.com/' target='_blank'>
+                Microsoft
+              </StyledLink>
+              &nbsp;and now&nbsp;
+              <StyledLink href='https://www.meta.com/' target='_blank'>
+                Meta
+              </StyledLink>
+              , I knew early on that I wanted to something in 
               the technical field. It wasn't until 2016 when my best friend's 
               brother and I were chatting when I realized that maybe I can 
               code too. 
@@ -61,7 +72,10 @@ export default function About() {
                 Leisure Time Inc.
               </StyledLink>
               &nbsp;I spent around a year and half there doing Full Stack Development and 
-              manaing their Marketing Team before getting an offer at Liberty Mutual.
+              managing their Marketing Team before getting an offer at&nbsp;
+              <StyledLink href='https://www.libertymutualgroup.com/about-lm/corporate-information/overview' target='_blank'>
+                Liberty Mutual
+              </StyledLink>.
             </Text>
           </TextBodyContainer>
         </MotionReveal>
