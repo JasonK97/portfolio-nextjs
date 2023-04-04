@@ -61,7 +61,10 @@ export default function About() {
                 Leisure Time Inc.
               </StyledLink>
               &nbsp;I spent around a year and half there doing Full Stack Development and 
-              manaing their Marketing Team before getting an offer at Liberty Mutual.
+              manaing their Marketing Team before getting an offer at&nbsp;
+              <StyledLink href='https://www.libertymutualgroup.com/about-lm/corporate-information/overview' target='_blank'>
+                Liberty Mutual
+              </StyledLink>.
             </Text>
           </TextBodyContainer>
         </MotionReveal>
