@@ -88,9 +88,11 @@ const HeaderDropdown = () => {
 					<Link 
 						href='/about' 
 						style={{ 
-						       color: '#3694FF', 
-						       minWidth: '100%', 
-						 }}
+							color: '#3694FF', 
+							paddingRight: '65%',
+							paddingTop: '1vh',
+							paddingBottom: '1vh',
+						}}
 					>
 						About Me
 					</Link>
@@ -99,9 +101,11 @@ const HeaderDropdown = () => {
 					<Link 
 						href='/projects' 
 						style={{ 
-						       color: '#3694FF', 
-						       minWidth: '100%', 
-						 }}
+							color: '#3694FF', 
+							paddingRight: '70%',
+							paddingTop: '1vh',
+							paddingBottom: '1vh',
+						}}
 					>
 						Projects
 					</Link>
@@ -110,9 +114,11 @@ const HeaderDropdown = () => {
 					<Link 
 						href='/work' 
 						style={{ 
-						       color: '#3694FF', 
-						       minWidth: '100%', 
-						 }}
+							color: '#3694FF', 
+							paddingRight: '39%',
+							paddingTop: '1vh',
+							paddingBottom: '1vh',
+						}}
 					>
 						Work Experience
 					</Link>
@@ -121,9 +127,11 @@ const HeaderDropdown = () => {
 					<Link 
 						href='/specialties' 
 						style={{ 
-						       color: '#3694FF', 
-						       minWidth: '100%',
-						 }}
+							color: '#3694FF', 
+							paddingRight: '23.5%',
+							paddingTop: '1vh',
+							paddingBottom: '1vh',
+						}}
 					>
 						Tools and Languages
 					</Link>
