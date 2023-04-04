@@ -62,9 +62,6 @@ const HeaderDropdown = () => {
 						dflex: "center",
 						svg: { pe: "none" },
 						color: '#3694FF',
-						hover: {
-							color: '#225a99',
-						},
 					}}
 					ripple={false}
 				>
@@ -73,7 +70,7 @@ const HeaderDropdown = () => {
 			</Navbar.Item>
 			<Dropdown.Menu
 				aria-label="About Me Pages"
-				variant='light'
+				// variant='light'
 				css={{
 					$$dropdownMenuWidth: "150px",
 					$$dropdownItemHeight: "40px",
@@ -88,16 +85,16 @@ const HeaderDropdown = () => {
 				}}
 			>
 				<Dropdown.Item>
-					<NextUILink href='/about' css={{ color: '#3694FF' }}>About Me</NextUILink>
+					<NextUILink href='/about' css={{ color: '#3694FF', minWidth: '100%' }}>About Me</NextUILink>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<NextUILink href='/projects' css={{ color: '#3694FF' }}>Projects</NextUILink>
+					<NextUILink href='/projects' css={{ color: '#3694FF', minWidth: '100%' }}>Projects</NextUILink>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<NextUILink href='/work' css={{ color: '#3694FF' }}>Work Experience</NextUILink>
+					<NextUILink href='/work' css={{ color: '#3694FF', minWidth: '100%' }}>Work Experience</NextUILink>
 				</Dropdown.Item>
 				<Dropdown.Item>
-					<NextUILink href='/specialties' css={{ color: '#3694FF' }}>Specialties</NextUILink>
+					<NextUILink href='/specialties' css={{ color: '#3694FF', minWidth: '100%' }}>Specialties</NextUILink>
 				</Dropdown.Item>
 			</Dropdown.Menu>
 		</Dropdown>
