@@ -20,9 +20,9 @@ export const Header = () => {
 				))}
 			</Navbar.Content> */}
 			<Navbar.Content hideIn='xs'>
-				<Link href='/' /*css={{ color: '#3694FF' }}*/>Home</NextUILink>
+				<Link href='/' /*css={{ color: '#3694FF' }}*/>Home</Link>
 				<HeaderDropdown />
-				<Link href='/blog' /*css={{ color: '#3694FF' }}*/>Blog</NextUILink>
+				<Link href='/blog' /*css={{ color: '#3694FF' }}*/>Blog</Link>
 			</Navbar.Content>
 			<Navbar.Content>
 				{socialLinks.map(({ link, image, alt }) => (
